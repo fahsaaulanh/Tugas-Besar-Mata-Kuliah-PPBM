@@ -1,3 +1,4 @@
+import 'package:chat_app/other/conversion.dart';
 import 'package:flutter/material.dart';
 
 import '../other/calculator.dart';
@@ -31,7 +32,9 @@ class _MainAppState extends State<MainApp> {
       case 2:
         return CalculatorPage(); // Halaman kalkulator
       case 3:
-        return YoutubePage(); // Halaman
+        return ConversionPage();
+      case 4:
+        return YoutubePlayerPage(); // Halaman
       default:
         return HomePage();
     }
@@ -98,6 +101,22 @@ class _MainAppState extends State<MainApp> {
               child: const Icon(Icons.calculate, color: Colors.white),
             ),
             label: 'Calculator',
+          ),
+          BottomNavigationBarItem(
+            icon: const Icon(Icons.thermostat_auto_outlined),
+            activeIcon: Container(
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF7893FF), Color(0xFF7893FF)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                shape: BoxShape.circle,
+              ),
+              padding: const EdgeInsets.all(6.0),
+              child: const Icon(Icons.thermostat, color: Colors.white),
+            ),
+            label: 'Conversion',
           ),
           BottomNavigationBarItem(
             icon: const Icon(Icons.video_library_outlined),

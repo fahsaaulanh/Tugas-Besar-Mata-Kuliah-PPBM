@@ -27,38 +27,41 @@ class _CalculatorPageState extends State<CalculatorPage> {
         children: [
           // Display Area
           Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color(0xFFE9E6F7),
-                    Color(0xFFE9E6F7),
-                  ], // Warna gradient
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(30), // Radius atas kiri
-                  topRight: Radius.circular(30), // Radius atas kanan
-                ),
-              ),
-              padding: EdgeInsets.all(16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text(
-                    currentInput,
-                    style: TextStyle(fontSize: 24),
-                    textAlign: TextAlign.end,
+            child: SingleChildScrollView(
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: [
+                      Color(0xFFE9E6F7),
+                      Color(0xFFE9E6F7),
+                    ], // Warna gradient
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
                   ),
-                  SizedBox(height: 10),
-                  Text(
-                    _getDisplayResult(),
-                    style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.end,
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(30), // Radius atas kiri
+                    topRight: Radius.circular(30), // Radius atas kanan
                   ),
-                ],
+                ),
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Text(
+                      currentInput,
+                      style: TextStyle(fontSize: 24),
+                      textAlign: TextAlign.end,
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      _getDisplayResult(),
+                      style:
+                          TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                      textAlign: TextAlign.end,
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -72,11 +75,11 @@ class _CalculatorPageState extends State<CalculatorPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _buildButton("C",
-                        onPressed: clearOnClick, color: Color(0xFFF84669)!),
+                        onPressed: clearOnClick, color: Colors.grey),
                     _buildButton("AC",
-                        onPressed: acOnClick, color: Color(0xFFF84669)!),
+                        onPressed: acOnClick, color: Colors.grey),
                     _buildButton("⌫",
-                        onPressed: deleteOnClick, color: Color(0xFFF84669)!),
+                        onPressed: deleteOnClick, color: Colors.grey),
                     _buildButton("÷",
                         onPressed: () => handleOperator('÷'),
                         color: Colors.blue[100]!),
@@ -126,7 +129,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                     _buildButton(".", onPressed: () => appendInput(".")),
                     _buildButton("=",
                         onPressed: calculateResult,
-                        color: Colors.green[100]!,
+                        color: const Color(0xFFA4B4F6),
                         flex: 2),
                   ],
                 ),
