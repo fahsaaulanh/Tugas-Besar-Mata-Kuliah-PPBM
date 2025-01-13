@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "129060840625",
+    "project_id": "tubes-ppbm",
+    "storage_bucket": "tubes-ppbm.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129060840625:android:612ae10b8aef495c92ae90",
+        "android_client_info": {
+          "package_name": "com.example.chat_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjRYpl38j9WZC68OZDu0yu7BzgfwoRvIw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
