@@ -76,7 +76,16 @@ class _LoginPageState extends State<LoginPage> {
               height: MediaQuery.of(context).size.height *
                   0.75, // Atur tinggi sesuai kebutuhan
               decoration: const BoxDecoration(
-                color: Color(0xAAF3F2F8),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xFFE7CBE8),
+                    Color(0xFFD5C6F9),
+                    Color(0xFAD5C6F9),
+                    Color(0xAAE7CBE8),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(35),
                   topRight: Radius.circular(35),
